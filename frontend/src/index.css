@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  @apply bg-gradient-to-r from-[#0f0f10] to-[#161622];
+}
+
+input,
+textarea,
+select {
+  background-color: #161622;
+}
+
+/* Ensuring that the background color remains consistent when autofilled */
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #161622 inset !important;
+  -webkit-text-fill-color: #fff !important;
+}
+
+/* Setting the text color for autofilled input elements */
+input:-webkit-autofill::first-line,
+textarea:-webkit-autofill::first-line {
+  color: #fff;
+}
